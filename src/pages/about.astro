@@ -1,0 +1,213 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout title="About me| ihsane loumame" description="About ihsane loumame">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About me"
+				tagline="Thanks for stopping by. Read below to learn more about my background and my education."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="ihsane"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">My introduction:</h2>
+				<div class="content">
+					<p>
+						Je suis Ihsane Loumame, passionné de l'ingénierie des
+						données et des logiciels. Actuellement étudiante en DATA AND SOFTWARE ENGINEERING (INSEA). 
+						Fasciné par l'exploration des
+						données et l'application du machine learning,deep learning . <div class=""></div>
+						 je consacre mon temps à maîtriser les algorithmes pour
+						résoudre des problèmes complexes. Mon parcours comprend
+						l'exploration approfondie des données, la création de
+						modèles de machine learning et le développement web et mobile .
+						
+						 Toujours à l'affût des dernières
+						avancées technologiques, je suis motivé à appliquer mes
+						compétences polyvalentes dans les domaines de la science
+						des données et du développement logiciel pour contribuer
+						positivement à divers projets et défis.
+					</p>
+				</div>
+
+				<section>
+					<h2 class="section-title"></h2>
+					<div class="timeline">
+						<!-- Timeline for Education -->
+						<div class="timeline-item">
+							<div class="timeline-icon">
+								<!-- Utilisez un grand cercle pour représenter l'éducation -->
+								<div class="circle"></div>
+								<!-- Font Awesome icon for education -->
+								<i class="fas fa-graduation-cap"></i>
+							</div>
+							<div class="timeline-content">
+								<h3 class="timeline-title">Education:</h3>
+								<p>
+									<br />
+									<strong>● <u>2019/2020</u></strong> BACCALAURÉAT
+									SCIENCES MATHÉMATIQUES - OPTION A<br />
+									<strong>LYCÉE CADI EYYAD</strong><br />
+									MARRAKECH
+								</p>
+								<p>
+									<br />
+									<strong>● <u>2020/2022</u></strong> Classes préparatoires
+									aux grandes écoles - Filière MP<br />
+									koutoubia prépa marrakech
+								</p>
+								<p>
+									<br />
+									<strong>● <u>2023/2024</u></strong> Cycle d'ingénieur
+									en Data &<br />
+									<strong>Software engineering</strong><br />
+									INSEA
+								</p>
+							</div>
+						</div>
+						<!-- Timeline for Experiences -->
+						<div class="timeline-item">
+							<div class="timeline-icon">
+								<!-- Utilisez un grand cercle pour représenter les expériences -->
+								<div class="circle"></div>
+							</div>
+							<div class="timeline-content">
+								<h3 class="timeline-title">Experiences:</h3>
+								<p>
+									<br />
+									<strong>● <u>juin 2022: </u></strong>Stage de
+									découverte a STAPORT SARL (marrakech): <br
+									/>
+									<strong></strong><br />
+									concevoir et réaliser une application intégrée
+									qui permet de gérer efficacement les documents
+									de l'entreprise tout en contrôlant l'accès des
+									employés.
+								</p>
+								<p>
+									<br />
+									<strong>● <u>mai 2024</u></strong> stage chez MENTORNESS<br />
+								<p>en cours
+									
+							</div>
+						</div>
+					</div>
+				</section>
+				<body>
+				</body>
+			</section>
+
+			<section>
+				<!-- Ajoutez ici des informations de contact ou un formulaire de contact -->
+			</section>
+		</main>
+	</div>
+
+	<ContactCTA />
+
+	<style>
+		.about {
+			display: flex;
+			flex-direction: column;
+			gap: 3.5rem;
+		}
+
+		img {
+			margin-top: 1.5rem;
+			border-radius: 1.5rem;
+			box-shadow: var(--shadow-md);
+		}
+
+		section {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			color: var(--gray-200);
+		}
+
+		.section-title {
+			grid-column-start: 1;
+			font-size: var(--text-xl);
+			color: var(--gray-0);
+		}
+
+		.content {
+			grid-column: 2 / 4;
+		}
+
+		.content :global(a) {
+			text-decoration: 1px solid underline transparent;
+			text-underline-offset: 0.25em;
+			transition: text-decoration-color var(--theme-transition);
+		}
+
+		.content :global(a:hover),
+		.content :global(a:focus) {
+			text-decoration-color: currentColor;
+		}
+
+		@media (min-width: 50em) {
+			.about {
+				display: grid;
+				grid-template-columns: 1fr 60% 1fr;
+			}
+
+			.about > :global(:first-child) {
+				grid-column-start: 2;
+			}
+
+			section {
+				display: contents;
+				font-size: var(--text-lg);
+			}
+		}
+
+		.timeline {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.timeline-item {
+			display: flex;
+			margin-bottom: 10rem;
+		}
+
+		.timeline-icon {
+			margin-right: 1rem;
+		}
+
+		.timeline-icon i {
+			font-size: 24px;
+			color: var(--gray-500);
+		}
+
+		.timeline-content {
+			flex: 1;
+		}
+
+		.timeline-title {
+			font-weight: bold;
+		}
+
+		@media (min-width: 768px) {
+			.timeline {
+				flex-direction: row;
+			}
+			.timeline-item {
+				margin-bottom: 10;
+				margin-right: 2rem;
+			}
+		}
+	</style>
+</BaseLayout>
